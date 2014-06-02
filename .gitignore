@@ -1,0 +1,9 @@
+data/DetectionModel-v1.5.yml
+data/TrackingModel-v1.10.yml
+include/Marcos.h
+include/XXDescriptor.h
+include/FaceAlignment.h
+lib/libintraface.a
+*.o
+*.jpg
+*.lbp
