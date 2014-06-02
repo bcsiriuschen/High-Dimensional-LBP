@@ -21,9 +21,9 @@ Download IntraFace Library from http://www.humansensing.cs.cmu.edu/intraface/ (I
 
 and put
 
-1. *libintraface.a* to lib/
-2. *DetectionModel-v1.5.yml*,*TrackingModel-v1.10.yml* to data/
-3. *FaceAlignment.h *, *Marcos.h*, *XXDescriptor.h* to include/
+1. **libintraface.a** to lib/
+2. **DetectionModel-v1.5.yml**,**TrackingModel-v1.10.yml** to data/
+3. **FaceAlignment.h **, **Marcos.h**, **XXDescriptor.h** to include/
 
 ##Build
 
@@ -51,7 +51,7 @@ After face detection, we can extract the high dimensional LBP features using ext
     output_dir: output directory for lbp features, default: ./
     input_images: face images for featrue extraction
 
-The output will be  *image_name.lbp* which contains 75,520 dimensional lbp features
+The output will be  **image_name.lbp** which contains 75,520 dimensional lbp features
 
 ##Contact
 
