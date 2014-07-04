@@ -17,7 +17,7 @@ bool FaceDetector::setDetector(const string& modelFileName) {
    return this->cascade.load(modelFileName);
 }
 
-vector<Rect>& FaceDetector::detect(const Mat& inputImage, vector<Rect>& outputFaces, Size minFaceSize) {
+vector<Rect>& FaceDetector::detect(const Mat& inputImage, vector<Rect>& outputFaces, Size minFaceSize, float scaleFactor, int minNeighbor) {
    outputFaces.clear();
    Mat processedImage;
    if (inputImage.channels() == 3) {
@@ -27,6 +27,6 @@ vector<Rect>& FaceDetector::detect(const Mat& inputImage, vector<Rect>& outputFa
       processedImage = inputImage;
    }
    equalizeHist(processedImage, processedImage);
-   cascade.detectMultiScale(processedImage, outputFaces, 1.1, 4, CV_HAAR_DO_CANNY_PRUNING, minFaceSize);
+   cascade.detectMultiScale(processedImage, outputFaces, scaleFactor, minNeighbor, CV_HAAR_DO_CANNY_PRUNING, minFaceSize);
    return outputFaces;
 }
