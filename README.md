@@ -7,6 +7,12 @@ Dong Chen, Xudong Cao, Fang Wen, Jian Sun. Blessing of Dimensionality: High-dime
 
 I use openCV for face detection and [IntraFace](http://www.humansensing.cs.cmu.edu/intraface/) for facial landmark detection.
 
+Details of the implementations can be found in 
+
+Bor-Chun Chen, Chu-Song Chen, Winston H. Hsu. Review and Implementation of High-Dimensional Local Binary Patterns and Its Application to Face Recognition, Technical Report TR-IIS-14-003, Institute of Information Science, Academia Sinica, 2014. [PDF](http://bcsiriuschen.github.io/High-Dimensional-LBP/tr14003.pdf)
+
+If you use this code for your research, please kindly cite the technical report above.
+
 ##Prerequisites
 
 ###openCV
