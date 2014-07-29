@@ -1,8 +1,150 @@
 <html>
 <head>
-<title>High-Dimensional-LBP</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Review and Implementation of High-Dimensional Local Binary Patterns and Its Application to Face Recognition</title>
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-52062463-3', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <script>
+        $(document).ready(function(){
+            $('.download').on('click', function() {
+                ga('send', 'event', 'Downloads', 'Download', $(this).attr('id'));
+            });
+        });
+    </script>
 </head>
+
 <body>
-High-Dimensional-LBP
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Review and Implementation of High-Dimensional Local Binary Patterns and Its Application to Face Recognition</h2>
+            <h4>
+            <a href="http://bcsiriuschen.github.io/">Bor-Chun Chen</a>, 
+            <a href="http://www.iis.sinica.edu.tw/pages/song/index_en.html">Chu-Song Chen</a>, 
+            <a href="http://www.csie.ntu.edu.tw/~winston/">Winston Hsu</a>
+            </h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <img src="fig1.jpg" class="img-responsive"/>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <h3>Abstract</h3>
+            High-dimensional local binary patterns have been proved to be a useful feature for face recognition, which provides near-human performance in a widely used face verification benchmark. In this report, we first review the technical aspect of this promising feature, and then we provide our implementation details of the feature. Finally, we show some experimental results using this feature on two public datasets, <a href="http://vis-www.cs.umass.edu/lfw/">LFW</a> and <a href="http://bcsiriuschen.github.io/CARC/">CACD</a>.
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <h3>Publication</h3>
+            Bor-Chun Chen, Chu-Song Chen, Winston H. Hsu. Review and Implementation of High-Dimensional Local Binary Patterns and Its Application to Face Recognition, Technical Report TR-IIS-14-003, Institute of Information Science, Academia Sinica, 2014.
+            [<a href="tr14003.pdf">Pdf</a>]
+            [<a data-toggle="collapse" data-target="#bibtex">Bibtex</a>]
+            <div id="bibtex" class="well collapse">
+                @techreport{chen2014review, <br />
+                    author={Bor-Chun Chen and Chu-Song Chen and Winston H. Hsu}, <br />
+                    title={Review and Implementation of High-Dimensional Local Binary Patterns and Its Application to Face Recognition}, <br />
+                    institution={Institute of Information Science, Academia Sinica}, <br />
+                    year={2014}, <br />
+                    number={TR-IIS-14-003} <br />
+                }
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <h3>Results</h3>
+            <p>Performance of HD-LBP on CACD with different PCA dimensions:</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-5">
+            <img src="CACD.png" class="img-responsive" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <p>ROC curve of HD-LBP on LFW compared with other state-of-the-art methods under unsupervised protocol:</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-5">
+            <img src="lfw_unsupervised.png" class="img-responsive" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <p>The AUC of different methods on LFW dataset. The HD-LBP can achieve very competitive results compared to other state-of-the-art methods:</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-5">
+            <div class="table-responsive">
+            <table class="table table-bordered">
+                <tr>
+                    <td>Method</td>
+                    <td>AUC</td>
+                </tr>
+                <tr>
+                    <td>LARK</td>
+                    <td>78.30%</td>
+                </tr>
+                <tr>
+                    <td>LHS</td>
+                    <td>81.07%</td>
+                </tr>
+                <tr>
+                    <td>PAF</td>
+                    <td>94.05%</td>
+                </tr>
+                <tr>
+                    <td>MRF-MLBP</td>
+                    <td>89.94%</td>
+                </tr>
+                <tr>
+                    <td>HD-LBP</td>
+                    <td>92.11%</td>
+                </tr>
+            </table>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <h3>Code</h3>
+            <p>
+            For High-Dimensional LBP (HD-LBP) code use in this report, please visit [<a href="https://github.com/bcsiriuschen/High-Dimensional-LBP" class="download" id="HD-LBP sources">here</a>]
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <h3>Links</h3>
+            <p>
+                <a href="http://bcsiriuschen.github.io/CARC/">Cross-Age Ceiebrity Dataset</a> <br />
+                <a href="http://vis-www.cs.umass.edu/lfw/">Labled Faces in the Wild Dataset</a>
+            </p>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-md-12">
+            Please contact <a href="mailto:bcsiriuschen@gmail.com">Sirius Chen</a> for any questions/problems/bug reports/etc.
+        </div>
+    </div>
+</div>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 </body>
 </html>
