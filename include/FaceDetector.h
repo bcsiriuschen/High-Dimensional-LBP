@@ -9,7 +9,7 @@ class FaceDetector{
 public:
    FaceDetector(const string& modelFileName);
    bool setDetector(const string& modelFileName);
-   vector<Rect>& detect(const Mat& inputImage, vector<Rect> &outputFaces, Size minFaceSize=Size(30,30));
+   vector<Rect>& detect(const Mat& inputImage, vector<Rect> &outputFaces, Size minFaceSize=Size(30,30), float scaleFactors=1.1, int minNeighbors=4);
    //bool detectAndSave(const Mat& inputImage, const string& outputFileName);
 private:
    CascadeClassifier cascade;
