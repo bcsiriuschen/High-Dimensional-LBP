@@ -4,6 +4,7 @@ include/Marcos.h
 include/XXDescriptor.h
 include/FaceAlignment.h
 lib/libintraface.a
+sftp-config.json
 *.o
 *.jpg
 *.lbp
