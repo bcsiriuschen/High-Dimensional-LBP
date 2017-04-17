@@ -15,15 +15,15 @@ If you use this code for your research, please kindly cite the technical report 
 
 For more information, pelase visit the [project website](http://bcsiriuschen.github.io/High-Dimensional-LBP/)
 
-##Prerequisites
+## Prerequisites
 
-###openCV
+### openCV
 
 Install openCV and change the first line in src/Makefile to opencv home directory:
 
     OPENCV_HOME = /path/to/opencv/
 
-###IntraFace
+### IntraFace
 
 Download IntraFace Library from http://www.humansensing.cs.cmu.edu/intraface/ (I used v1.0)
 
@@ -33,11 +33,11 @@ and put
 2. **DetectionModel-v1.5.yml**,**TrackingModel-v1.10.yml** to data/
 3. **FaceAlignment.h **, **Marcos.h**, **XXDescriptor.h** to include/
 
-##Build
+## Build
 
 change to src directory and type make
 
-##Usage
+## Usage
 
 If everythings goes right, there will be to binary files in bin/
 
@@ -61,6 +61,6 @@ After face detection, we can extract the high dimensional LBP features using ext
 
 The output will be  **image_name.lbp** which contains 75,520 dimensional lbp features
 
-##Contact
+## Contact
 
 If you have any questions, feel free to contact me at bcsiriuschen@gmail.com
